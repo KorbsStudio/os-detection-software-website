@@ -1,0 +1,69 @@
+html.mac [data-for-os=windows] {
+    display: none !important
+}
+
+html.windows [data-for-os=mac] {
+    display: none !important
+}
+
+.app-screenshot {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    max-width: 960px;
+    width: 100%
+}
+
+.windows .app-screenshot {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+} 
+
+.mac .app-screenshot {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3)
+}
+.samples pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font: 12px "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+    padding: 1em;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background: #0d0d0d
+}
+
+.btn-outline-purple:hover {
+    background-image: linear-gradient(to bottom, #8241f9, #4e277b);
+    border-color: #150a27;
+    color: #fff
+}
+
+.btn-outline-purple:active {
+    background-image: linear-gradient(to top, #8241f9, #7038cd)
+}
+
+.btn-desktop-purple {
+    background-image: linear-gradient(to bottom, #8241f9, #4e277b);
+    border-color: #150a27;
+    color: #fff
+}
+
+.btn-desktop-purple:hover {
+    background: none;
+    background-image: linear-gradient(to bottom, #8c50f9, #552b87);
+    border-color: #150a27
+}
+
+.btn-desktop-purple:active {
+    background-image: linear-gradient(to top, #8241f9, #7038cd)
+}
+
+.purple-square {
+    background-color: #7b63ab;
+    border-radius: 5px;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15)
+}
+
+.disclaimer-block {
+    background: #3c4349
+}

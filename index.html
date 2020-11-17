@@ -1,0 +1,39 @@
+<html>
+    <title>OS Detection Demo</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://desktop.github.com/javascript/os.js" charset="utf-8"></script>
+    <body>
+        <div data-for-os="windows" class="pc">
+            <img src="https://images-na.ssl-images-amazon.com/images/I/81wW7hD1NKL._AC_SX466_.jpg">
+            <h1>Windows</h1>
+            <a href="#">Download for Windows(64-bit)</a>
+            <p>Download for <a href="#">macOS</a> or <a href="#">Linux</a></p>
+        </div>
+        <div data-for-os="mac" class="mac">
+            <img width="466" src="https://www.bhphotovideo.com/images/images2500x2500/apple_z0vq_mrqy2_03_27_imac_with_retina_1468584.jpg">
+            <h1>macOS</h1>
+            <a href="#">Download for macOS</a>
+            <p>Download for <a href="#">Windows</a> or <a href="#">Linux</a></p>
+        </div>
+    </body>
+</html>
+<script>
+(function() {
+
+var htmlElement = document.documentElement;
+
+if (navigator.platform.match(/(Mac|iPhone|iPod|iPad)/i)) {
+  htmlElement.className = 'mac'
+} else {
+  htmlElement.className = 'windows'
+}
+
+document.addEventListener('click', function(event) {
+  var target = event.target;
+  if (target.getAttribute && target.getAttribute('data-action') === 'switch-os') {
+    event.preventDefault();
+    htmlElement.className = target.getAttribute('data-os')
+  }
+})
+})();
+</script>
